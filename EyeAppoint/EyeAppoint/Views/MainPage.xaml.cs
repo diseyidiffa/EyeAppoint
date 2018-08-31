@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using EyeAppoint.Models;
+using Newtonsoft.Json;
 using System;
 using System.Data;
 using System.Net.Http;
@@ -18,7 +19,7 @@ namespace EyeAppoint.Views
             var json =  client.GetAsync(Url);
             var responseJson = json.Result.Content.ReadAsStringAsync().Result;
           //  var msg -JsonConvert.DeserializeObject<DataTable>(responseJson);
-         //   JsonConvert.DeserializeObject<ListView>(json.ToString());
+           JsonConvert.DeserializeObject<Product>(json.ToString());
             InitializeComponent();
         }
     }
