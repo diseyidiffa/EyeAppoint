@@ -14,7 +14,7 @@ namespace EyeAppoint
             InitializeComponent();
 
 
-            MainPage = new MainPage();
+            MainPage = new ShopPage();
         }
 
         protected override void OnStart()
