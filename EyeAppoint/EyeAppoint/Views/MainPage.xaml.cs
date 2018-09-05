@@ -17,9 +17,9 @@ namespace EyeAppoint.Views
             Title = "EyeAppoint";
             var client = new HttpClient();
             var json =  client.GetAsync(Url);
-            var responseJson = json.Result.Content.ReadAsStringAsync().Result;
+          //  var responseJson = json.Result.Content.ReadAsStringAsync().Result;
           //  var msg -JsonConvert.DeserializeObject<DataTable>(responseJson);
-           JsonConvert.DeserializeObject<Product>(json.ToString());
+        //   JsonConvert.DeserializeObject<Product>(json.ToString());
             InitializeComponent();
         }
     }
