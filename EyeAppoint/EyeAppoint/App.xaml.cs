@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Plugin.Connectivity;
 using EyeAppoint.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -12,9 +13,14 @@ namespace EyeAppoint
         public App()
         {
             InitializeComponent();
+             await CrossConnectivity.Current.ConnectivityChanged += async (sender, args) =>
+            {
+                if (args.IsConnected)
+ 		        {
+                }
+			};
 
-
-            MainPage = new ShopPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
