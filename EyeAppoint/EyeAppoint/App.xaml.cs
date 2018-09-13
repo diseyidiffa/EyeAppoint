@@ -13,7 +13,7 @@ namespace EyeAppoint
         public App()
         {
             InitializeComponent();
-            CrossConnectivity.Current.ConnectivityChanged += async (sender, args) =>
+            CrossConnectivity.Current.ConnectivityChanged += async (sender, args) => 
             {
                 if (args.IsConnected)
                 {
@@ -24,8 +24,8 @@ namespace EyeAppoint
                     MainPage = new NoInternetPage();
                 }
             };
+            MainPage = new MainPage();
 
-           
         }
 
         protected override void OnStart()
