@@ -7,6 +7,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 namespace EyeAppoint.Droid
 {
@@ -19,7 +20,11 @@ namespace EyeAppoint.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+            //   
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            //global::Xamarin.Forms.Application.Current.On<Xamarin.Forms.PlatformConfiguration.Android>()
+            //      .UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust.Resize);
+
             LoadApplication(new App());
         }
     }

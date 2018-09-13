@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Plugin.Connectivity;
 using EyeAppoint.Views;
+using AndroidSpecific = Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace EyeAppoint
@@ -12,8 +13,10 @@ namespace EyeAppoint
 
         public App()
         {
+            AndroidSpecific.Application.SetWindowSoftInputModeAdjust(this, AndroidSpecific.WindowSoftInputModeAdjust.Resize);
+
             InitializeComponent();
-            CrossConnectivity.Current.ConnectivityChanged += async (sender, args) => 
+            CrossConnectivity.Current.ConnectivityChanged += (sender, args) =>
             {
                 if (args.IsConnected)
                 {

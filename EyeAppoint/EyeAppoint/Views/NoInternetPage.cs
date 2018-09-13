@@ -18,9 +18,8 @@ namespace EyeAppoint.Views
             var sub = new AbsoluteLayout();
             splashImage = new Image
             {
-                Source = "icon.png",
-                WidthRequest = 100,
-                HeightRequest = 100
+                Source = "nointernet.png"
+               
             };
             AbsoluteLayout.SetLayoutFlags(splashImage,
                AbsoluteLayoutFlags.PositionProportional);
@@ -29,7 +28,7 @@ namespace EyeAppoint.Views
 
             sub.Children.Add(splashImage);
 
-            this.BackgroundColor = Color.FromHex("#429de3");
+            this.BackgroundColor = Color.FromHex("#ffffff");
             this.Content = sub;
         }
 
