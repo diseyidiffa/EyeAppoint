@@ -21,5 +21,24 @@ namespace EyeAppoint.Views
 			}
 
         }
+        void webOnNavigating(object sender, WebNavigatingEventArgs e)
+        {
+            if (!e.Url.Contains("cyclopsodyssey"))
+            {
+                try
+                {
+                    var uri = new Uri(e.Url);
+                    Device.OpenUri(uri);
+                }
+                catch (Exception)
+                {
+                }
+
+                e.Cancel = true;
+            }
+        }
+        void webOnEndNavigating(object sender, WebNavigatedEventArgs e)
+        {
+        }
     }
 }

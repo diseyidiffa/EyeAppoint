@@ -28,12 +28,8 @@ namespace EyeAppoint
                     MainPage = new NoInternetPage();
                 }
             };
-            MainPage = new NavigationPage(new MainPage())
-            {
-                BarBackgroundColor = Color.FromHex("#32409f"),
-                BarTextColor = Color.White
-
-            };
+            MainPage = new MainPage();
+            
             
 
         }
