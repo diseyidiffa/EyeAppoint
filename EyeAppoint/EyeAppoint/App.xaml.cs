@@ -21,13 +21,20 @@ namespace EyeAppoint
                 if (args.IsConnected)
                 {
                     MainPage = new MainPage();
+
                 }
                 else
                 {
                     MainPage = new NoInternetPage();
                 }
             };
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage())
+            {
+                BarBackgroundColor = Color.FromHex("#32409f"),
+                BarTextColor = Color.White
+
+            };
+            
 
         }
 

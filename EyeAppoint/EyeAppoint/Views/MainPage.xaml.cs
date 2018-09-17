@@ -15,10 +15,9 @@ namespace EyeAppoint.Views
         {
             
             InitializeComponent();
-           if (CrossConnectivity.Current.IsConnected)
+            if(CrossConnectivity.Current.IsConnected)
             {
-            
-             Browser.Source = "https://cyclopsodyssey.com/pwa";
+               Browser.Source = "https://cyclopsodyssey.com/pwa";
 			}
 
         }

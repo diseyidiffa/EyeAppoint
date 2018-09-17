@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>EyeAppoint</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.EyeAppoint</string>
+	<string>com.eyeappoint.eyeappoint</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
@@ -36,5 +36,7 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>XSLaunchImageAssets</key>
 	<string>Assets.xcassets/LaunchImage.launchimage</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
