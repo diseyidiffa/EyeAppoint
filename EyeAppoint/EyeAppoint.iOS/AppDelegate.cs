@@ -26,6 +26,9 @@ namespace EyeAppoint.iOS
             XfxControls.Init();
 
             global::Xamarin.Forms.Forms.Init();
+            UIApplication.SharedApplication.SetStatusBarStyle(UIStatusBarStyle.LightContent, false);
+            UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(50,64,159);
+            UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes { TextColor = UIColor.White });
 
             LoadApplication(new App());
 
