@@ -125,6 +125,7 @@
     <BundleResource Include="Resources\logoicon.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon60.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon120v1.png" />
+    <BundleResource Include="Resources\eyeappoint.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
